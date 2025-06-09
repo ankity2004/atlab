@@ -3,6 +3,20 @@
   width: auto;
 }
 
+.header-li{
+  font-size: 0.9vw;
+}
+
+
+.translate-scale:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.power-education-head{
+  margin-bottom: 0px !important;
+  height: 25px;
+}
 @font-face {
   font-family: "poppins";
   src: url("/images/Fonts/Poppins-Light.ttf") format("truetype");
@@ -49,8 +63,9 @@ body {
 .he-card-container {
   display: grid;
   grid-template-columns: repeat(4, calc(30% - 85px));
-  margin-left: 120px;
-  margin-top: -20vh;
+  /* margin-left: 120px; */
+  justify-content: center;
+  margin-top: -25vh;
   text-align: center;
 }
 
@@ -143,15 +158,13 @@ body {
   }
 
   .flex.flex-row.justify-between > div:last-child img:last-child {
-    height: 15vh !important;
+    height: 100px !important;
     width: 30vw;
   }
 
   .he-card-container {
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 5vh;
+    margin-top: 0;
     gap: 15px;
   }
 
@@ -202,6 +215,11 @@ body {
 .partners-logos-image {
   height: 25vh;
   object-fit: contain;
+}
+
+.partners-logos-image:hover{
+   transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /*Section 5*/
@@ -302,29 +320,55 @@ body {
   margin: auto;
 }
 
-.LearningJourneybackground img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
-.LearningJourneyContent {
+
+/* .LearningJourneyContent {
   bottom: 200vh;
   position: relative;
   display: flex;
   justify-content: center;
   width: 100vw;
-}
+} */
+
+.LearningJourneyContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+  justify-content: center;
+    height: 100%;
+    z-index: 2;
+  bottom: 200vh;
+
+  }
+
+  .LearningJourneyContent img {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 95%;
+
+    display: block;
+    height: auto;
+    z-index: 1;
+  }
 
 .LearningText {
-  position: relative;
-  top: -30vh;
-  width: 90%;
-  color: white;
-  padding: 1rem;
-  font-weight: 800;
-  font-size: 50px;
-}
+    position: absolute;
+    top: 4%;
+    left: 49%;
+    font-weight: 900;
+    transform: translateX(-50%);
+    font-size: 50px !important;
+    text-align: left;
+    padding: 0.5rem;
+    z-index: 3;
+    width: 95%;
+    color: white;
+  }
+
+
 
 .overlay-text {
   position: absolute;
@@ -334,7 +378,12 @@ body {
   padding: 6px 12px;
   border-radius: 6px;
   pointer-events: auto;
+        margin-left: -15px;
+        width: 20vw;
+        z-index: 3; 
 }
+
+
 
 .overlay-text p {
   position: absolute;
@@ -342,46 +391,45 @@ body {
   font-size: 13px;
   font-weight: 500;
   line-height: 1.4em;
-  width: 250px;
+  width: 18vw;
   text-align: left;
   padding-top: 14px;
 }
 
 .step1 {
-  top: 18vh;
-  left: 11vw;
-}
+    top: 20%;
+    left: 8%;
+  }
 
-.step2 {
-  top: 50vh;
-  left: 11vw;
-  width: 13vw;
-}
-.step3 {
-  top: 112vh;
-  left: 17vw;
-  width: 10vw;
-}
-.step4 {
-  top: 66vh;
-  left: 35vw;
-  width: 12vw;
-}
+  .step2 {
+    top: 36%;
+    left: 8%;
+  }
 
-.step5 {
-  top: 5vh;
-  left: 45vw;
-  width: 12vw;
-}
-.step6 {
-  top: 53vh;
-  left: 59vw;
-  width: 8vw;
-}
-.step7 {
-  top: 107vh;
-  left: 73vw;
-}
+  .step3 {
+    top: 60%;
+    left: 14%;
+  }
+
+  .step4 {
+    top: 41%;
+    left: 33%;
+  }
+
+  .step5 {
+    top: 20%;
+    left: 52%;
+  }
+
+  .step6 {
+    top: 37%;
+    left: 58%;
+  }
+
+  .step7 {
+    top: 57%;
+    left: 72%;
+  }
 
 /*Section 7*/
 .inspire-section {
@@ -1236,10 +1284,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    text-align: center;
+    text-align: left;
     padding: 0.5rem;
     z-index: 3;
-    width: 150px;
+    width: 100%;
   }
 
   .overlay-text {
@@ -1335,7 +1383,7 @@ body {
 .slide-content {
   width: 33.333%;
   flex-shrink: 0;
-  padding: 40px;
+  padding: 20px;
 }
 
 .slide-content-a {
@@ -1412,7 +1460,7 @@ body {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: #333;
   line-height: 1.2;
@@ -1421,7 +1469,8 @@ body {
 
 .description {
   color: #666;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
@@ -1456,7 +1505,7 @@ body {
   color: black;
   font-weight: bold;
   font-size: 14px;
-  padding: 8px 40px;
+  padding: 4px 20px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -1539,6 +1588,7 @@ body {
 
 .container {
   max-width: 1200px;
+  width:80vw;
   position: relative;
   bottom: 8vh;
   margin: 0 auto;
@@ -1546,12 +1596,25 @@ body {
   align-items: stretch;
   background: white;
   padding: 40px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 24px rgba(0, 0, 0, 0.2);
   padding: 40px;
   border-radius: 20px;
   gap: 40px;
 }
 
+.k-12-card-inner-div{
+  min-height: 240px !important;
+}
+
+.k-12-card-outer-div{
+  box-shadow: 0 25px 24px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.k-12-card-outer-div:hover{
+   transform: scale(1.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .education-card {
   width: 25vw;
   display: flex;
@@ -1692,6 +1755,12 @@ body {
   .k-12-desc {
     font-size: 13px;
   }
+  .k-12-card-inner-div{
+    min-height: 350px !important;
+  }
+  .k-12-card-inner-div img{
+    width: 11vw !important;
+  }
 
   .k-12-man-image img {
     height: 25vh !important;
@@ -1756,7 +1825,7 @@ body {
     top: -35vh;
   }
   .circle-section {
-    height: 42vh;
+    height: 48vh;
   }
 
   .title {
@@ -1844,7 +1913,7 @@ body {
 
   .k-12 {
     width: 100% !important;
-    padding: 20px 40px;
+    padding: 10px 10px;
     flex-direction: row !important;
   }
   .k-12-main {
@@ -2310,10 +2379,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    text-align: center;
+    text-align: left;
     padding: 0.5rem;
     z-index: 3;
-    width: 150px;
+    width: 100%;
   }
 
   .overlay-text {
@@ -3244,6 +3313,7 @@ body {
     top: -3vh !important;
   }
 
+
   .right-circle {
     position: relative;
   }
@@ -3256,7 +3326,7 @@ body {
   }
   .circle-shape-2 {
     height: 8vh !important;
-    left: 5vw !important  ;
+    left: 1vw !important  ;
     top: -40vh !important;
     z-index: 12;
   }
@@ -3269,9 +3339,12 @@ body {
 
   .card-description {
     font-size: 10px !important;
+    padding-left: 10px;
   }
   .card-title {
     font-size: 20px !important;
+    padding-top: 10px;
+    padding-left: 10px;
   }
 
   .container {
@@ -3291,10 +3364,12 @@ body {
 }
 
 .power-education-span{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   height: 130px !important;
 }
 }
-
 
 
 .power-education-head{
@@ -3307,5 +3382,78 @@ body {
 }
 
 .power-education-span{
-  height: 100px;
+  height: 130px;
+  width: 21vw !important;
+}
+
+
+.power-education-image:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.power-education-span:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.power-education-head:hover{
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+}
+
+.counter-block p:hover{
+   transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-container img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.clients-logo-7 img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.lab-card img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.story-card img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.presence-map img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.footer-grid p:hover, .footer-grid li:hover, .about-us p:hover, .about-us img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.lab-button:hover , .read-more-btn:hover {
+  transform: scale(1.05);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.he-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.pr-16 img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.k-12-man-image img:hover, .k-12-image-1:hover, .circle-section img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
